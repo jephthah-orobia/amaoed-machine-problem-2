@@ -30,9 +30,12 @@ int main()
     {
       for (int col = 0; col < 7; col++)
       {
-        if(n > 0 && row == (n-1)/7 && col == (n - 1) % 7)
-          cout<<"\033[32m";
-        else if(seats[row][col]==0) cout << "\033[31m";
+        if (n > 0 && row == (n - 1) / 7 && col == (n - 1) % 7)
+          // if the seat is recently reserved, print it as green
+          cout << "\033[32m";
+        else if (seats[row][col] == 0)
+          // if the seat is already previously reserved, print it red
+          cout << "\033[31m";
         cout << seats[row][col] << "\033[0m\t";
       }
       cout << endl;
@@ -49,11 +52,13 @@ int main()
       int r = (n - 1) / 7, c = (n - 1) % 7;
       if (seats[r][c] == 0)
       {
+        //\033[31m is to print it red
         cout << "\033[31m<< Seat #" << n << " is taken >>\033[0m";
-        n=0;
+        n = 0;
       }
       else
       {
+        // print to green
         seats[r][c] = 0;
         cout << "\033[32m<< Seat #" << n << " is successfully reserved. >>\033[0m";
       }
@@ -62,8 +67,9 @@ int main()
     {
       cin.clear();
       cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      // print in red on white.
       cout << "\033[47m\033[31m!!! Invalid seat number. Try again. !!!\033[0m";
-      n=0;
+      n = 0;
     }
 
     cout << endl
