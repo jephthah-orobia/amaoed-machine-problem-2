@@ -38,7 +38,9 @@ int main()
     cout << endl
          << "Enter seat number to reserve: ";
     cin >> n;
-    system("clear");
+    system("clear"); // for linux
+    /* uncomment the nex line if running on windows */
+    //system("cls"); // for windows
     cout << endl;
     if (!cin.fail() && n > 0 && n < 36)
     {
