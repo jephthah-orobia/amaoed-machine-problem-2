@@ -30,7 +30,10 @@ int main()
     {
       for (int col = 0; col < 7; col++)
       {
-        cout << seats[row][col] << "\t";
+        if(n > 0 && row == (n-1)/7 && col == (n - 1) % 7)
+          cout<<"\033[32m";
+        else if(seats[row][col]==0) cout << "\033[31m";
+        cout << seats[row][col] << "\033[0m\t";
       }
       cout << endl;
     }
@@ -46,19 +49,21 @@ int main()
       int r = (n - 1) / 7, c = (n - 1) % 7;
       if (seats[r][c] == 0)
       {
-        cout << "<< Seat #" << n << " is taken >>";
+        cout << "\033[31m<< Seat #" << n << " is taken >>\033[0m";
+        n=0;
       }
       else
       {
         seats[r][c] = 0;
-        cout << "<< Seat #" << n << " is successfully reserved. >>";
+        cout << "\033[32m<< Seat #" << n << " is successfully reserved. >>\033[0m";
       }
     }
     else
     {
       cin.clear();
       cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      cout << "!!! Invalid seat number. Try again. !!!";
+      cout << "\033[47m\033[31m!!! Invalid seat number. Try again. !!!\033[0m";
+      n=0;
     }
 
     cout << endl
