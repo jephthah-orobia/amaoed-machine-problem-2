@@ -1,26 +1,12 @@
-# C++ Programming Language | VS Code
+# Machine Problem 2
+- Partial requirement for AMAOEd's ITE7101: Computer Programming
 
-This repository contains a development environment for Visual Studio code to be used by C++ Programming Language of AMA Online Education.
-
-**Table of Contents**
-
-- [Getting Started](docs/getting-started/README.md)
-  - [Dev Container](docs/getting-started/dev-container/README.md)
-    - [Installing the Pre-requisites](docs/getting-started/dev-container/README.md#installing-the-pre-requisites)
-      - [Windows](docs/getting-started/dev-container/windows.md)
-      - [macOS](docs/getting-started/dev-container/osx.md)
-      - [Linux](docs/getting-started/dev-container/linux.md)
-    - [Configuring the Visual Studio Code](docs/getting-started/dev-container/README.md#configuring-the-visual-studio-code)
-    - [Cloning the Git Repository](docs/getting-started/dev-container/README.md#cloning-the-git-repository)
-    - [Opening in Dev Container](docs/getting-started/dev-container/README.md#opening-in-dev-container)
-  - [Bare Metal](docs/getting-started/bare-metal/README.md)
-    - [Installing the Pre-requisites](docs/getting-started/bare-metal/README.md#installing-the-pre-requisites)
-      - [Windows](docs/getting-started/bare-metal/windows.md)
-      - [macOS](docs/getting-started/bare-metal/osx.md)
-      - [Linux](docs/getting-started/bare-metal/linux.md)
-    - [Configuring the Visual Studio Code](docs/getting-started/bare-metal/README.md#configuring-the-visual-studio-code)
-    - [Cloning the Git Repository](docs/getting-started/bare-metal/README.md#cloning-the-git-repository)
-    - [Opening in Bare Metal](docs/getting-started/bare-metal/README.md#opening-in-bare-metal)
-- [Maintenace](docs/maintenance/README.md)
-  - [Updating the CMake Version](docs/maintenance/README.md#updating-the-cmake-version)
-  - [Updating the Dev Container Image](docs/maintenance/README.md#updating-the-dev-container-image)
+Write a C++ program with the following specifications:
+1.	Use two-dimensional array with size 7 columns and 5 rows.
+2.	Seat numbers are populated during run-time.
+3.	User is asked to input a seat number.
+4.	Seat number chosen is replaced by 0.
+5.	Program displays a remark “Seat successfully reserved” when reservation is done.
+6.	User is not allowed to reserve a previously reserved seat.  Display “Seat is taken” remarks.
+7.	User is not allowed to enter an invalid seat number.  Display an error message.
+8.	Program continuously loops.
